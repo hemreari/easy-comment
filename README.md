@@ -5,10 +5,9 @@
  It works for C. However, I will add the other languages.
 
 ### Usage
-   Open a terminal:
-   	```
-	$ cd ~/Desktop   
-	$ git clone https://github.com/almerion/easy-comment.git   
-	$ cd easy-comment   
-	$ python3 create-comment.py   
-	```
+   Open a terminal:  
+	`$ cd ~/Desktop`  
+	`$ git clone https://github.com/almerion/easy-comment.git`  
+	`$ cd easy-comment`  
+	`$ python3 create-comment.py` 
+	
