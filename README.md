@@ -12,9 +12,3 @@
 	$ cd easy-comment
 	$ python3 create-comment.py
 ```
-### Usage
-   Open a terminal:  
-	`$ cd ~/Desktop`  
-	`$ git clone https://github.com/almerion/easy-comment.git`  
-	`$ cd easy-comment`  
-	`$ python3 create-comment.py` 
