@@ -18,7 +18,7 @@ class EasyComment:
         # Program works for c files, the other language will be added soon.
 
         self.file_name = input("Enter a file name: ")
-n        self.name_author = input("Enter author: ")
+        self.name_author = input("Enter author: ")
         self.created_date = input("Enter creation date: ")
         self.last_update = self.created_date
         self.description = input("Enter a description for your source file: ")
