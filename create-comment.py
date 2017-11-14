@@ -25,17 +25,15 @@ class EasyComment:
         
         if self.type_source_file == '1':
             self.create_C_File(self.file_name);
-       #elif self.type_source_file == '2':
-       #    self.create_Python_File(self.file_name);
-       #elif self.type_source_file == '3':
-       #    self.create_Assem_File(self.file_name);
+        elif self.type_source_file == '2':
+            self.create_Python_File(self.file_name);
 
     def create_C_File(self, fileName):
 
-        '''
-            creates a source file for C pl with comment block, if the file doesn't exist.
-            If the file is existed, writes a comment block this file.  
-        '''
+        
+            # creates a source file for C with comment block, if the file doesn't exist.
+            # If the file exists, writes a comment block this file.  
+
         f = open(self.file_name, "w+");
         f.write("/*" + '-' * 77 + "*\n")
         f.write(" * Author       : " + self.name_author + ' ' * (80 - (19 + len(self.name_author))) + "*\n")
@@ -49,7 +47,17 @@ class EasyComment:
 
     def create_Python_File(self, fileName):
 
-        print("This option is not avaible yet.\n")
+        f = open(self.file_name, "w+");
+        f.write("'''" + '-' * 77)
+        f.write(" * Author       : " + self.name_author + ' ' * (80 - (19 + len(self.name_author))) + "*\n")
+        f.write(" * Created Date : " + self.created_date + ' ' * (80 - (19 + len(self.created_date))) + "*\n")
+        f.write(" * Last Update  : " + self.last_update + ' ' * (80 - (19 + len(self.last_update))) + "*\n")
+        f.write(" * Description  : " + self.description + ' ' * (80 - (19 + len(self.description))) + "*\n")
+        f.write(" *" + '-' * 77 + "*\n")
+        f.write(" '''\n")
+        
+        f.close()
+
 
 
     def create_Assem_File(self, fileName):
@@ -65,7 +73,7 @@ class EasyComment:
            message. End of the function it calls 
            welcoming function.
         '''
-        if typeOfFile == '2' or typeOfFile == '3':
+        if typeOfFile == '3':
             print("This option is unavaible.")
             print("*" * 30)
             self.welcoming()
