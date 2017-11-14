@@ -2,9 +2,10 @@
   
  This is a tiny Python program that adds comment section to the top of the source file.  
  The only dependency is latest version of Python(V 3.6.2)  
- It works for C, for now. However, I will add the other languages.  
+ Program works for C and Python, for now. I will add the other languages on the other time.  
 
 ### Usage
+
    Open a terminal:
 ```
 	$ cd ~/Desktop
