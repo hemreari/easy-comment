@@ -50,7 +50,7 @@ class EasyComment:
         # creates a source file for Python with comment block.
 
         f = open(self.file_name, "w+");
-        f.write("'''" + '-' * 77)
+        f.write(" '''\n *" + '-' * 77 +"*\n")
         f.write(" * Author       : " + self.name_author + ' ' * (80 - (19 + len(self.name_author))) + "*\n")
         f.write(" * Created Date : " + self.created_date + ' ' * (80 - (19 + len(self.created_date))) + "*\n")
         f.write(" * Last Update  : " + self.last_update + ' ' * (80 - (19 + len(self.last_update))) + "*\n")
