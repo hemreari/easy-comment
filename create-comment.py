@@ -28,13 +28,26 @@ class EasyComment:
         elif self.type_source_file == '3':
             self.createJava(self.file_name);
 
+
+    # if the given files isn't there creates a file with given name
+    def createFile(self, fileName):
+        f = open(self.file_name, 'w')
+
     def createC(self, fileName):
 
         
         # creates a source file for C with comment block, if the file doesn't exist.
         # If the file exists, writes a comment block this file.  
+        while True:
+            try:
+                f = open(self.file_name, "r+");
+                break
+            except OSError:
+                createFile(self.file_name)
 
-        f = open(self.file_name, "w+");
+        content = f.read()
+        f.seek(0, 0)
+
         f.write("/*" + '-' * 77 + "*\n")
         f.write(" * Author       : " + self.name_author + ' ' * (80 - (19 + len(self.name_author))) + "*\n")
         f.write(" * Created Date : " + self.created_date + ' ' * (80 - (19 + len(self.created_date))) + "*\n")
@@ -42,6 +55,7 @@ class EasyComment:
         f.write(" * Description  : " + self.description + ' ' * (80 - (19 + len(self.description))) + "*\n")
         f.write(" *" + '-' * 77 + "*\n")
         f.write(" */\n")
+        f.write(content)
         
         f.close()
 
