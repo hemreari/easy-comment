@@ -4,7 +4,7 @@
  The only dependency is latest version of Python(V 3.6.2)  
  Program works for C and Python, for now. I will add the other languages on the other time.  
 
-### Usage
+### Usage and Installation
 
    Open a terminal:
 ```
