@@ -27,6 +27,8 @@ class EasyComment:
             self.createPython(self.file_name);
         elif self.type_source_file == '3':
             self.createJava(self.file_name);
+        else:
+            print("You have to choose [1], [2] or [3]")
 
 
     # if the given files isn't there creates a file with given name
